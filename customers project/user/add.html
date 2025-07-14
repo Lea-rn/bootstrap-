@@ -23,6 +23,8 @@
     <link href="../css/bootstrap.min.css" rel="stylesheet" />
     <meta name="theme-color" content="#712cf9" />
     <link href="../css/sidebars.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/mystyle.css">
+
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -213,22 +215,30 @@
     </svg>
 
     <main class="d-flex flex-row flex-nowrap">
-      <!-- ///// sidebar ::  -->
+       <!-- ///// sidebar ::  -->
       <div
-        class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark"
-        style="width: 280px"
+        class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark sidebar position-relative"
+       
+        id="sidebarId"
       >
+
+      
+ 
+         <span style="top: 10px; right: 20px;" class="position-absolute fs-5 " onclick="ToggleSidebar()">
+<i class="bi bi-x-circle"></i>
+  </span>
+
         <a
           href="/"
           class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
         >
-          <i class="bi bi-lightning-charge fs-2 me-3"></i>
-          <span class="fs-4">Sidebar</span>
+       <i class="bi bi-lightning-charge fs-2 me-3"></i>
+          <span class="fs-4 sidebar-text">Sidebar</span>
         </a>
         <hr />
         <ul class="nav nav-pills flex-column mb-auto">
           <li class="nav-item">
-            <a href="/" class="nav-link text-white" aria-current="page">
+            <a href="/" class="nav-link text-white " aria-current="page">
               <svg
                 class="bi pe-none me-2"
                 width="16"
@@ -237,10 +247,12 @@
               >
                 <use xlink:href="#home"></use>
               </svg>
-              Home
+              <span class="sidebar-text" >Home</span>
             </a>
           </li>
-
+   
+ 
+  
           <li>
             <a href="./user/add.html" class="nav-link text-white active">
               <svg
@@ -251,7 +263,7 @@
               >
                 <use xlink:href="#people-circle"></use>
               </svg>
-              Add User
+           <span class="sidebar-text">Add User</span>   
             </a>
           </li>
         </ul>
@@ -264,13 +276,13 @@
             aria-expanded="false"
           >
             <img
-              src="../imgs/harryr.jpg"
+              src="./imgs/harryr.jpg"
               alt=""
               width="32"
               height="32"
               class="rounded-circle me-2"
             />
-            <strong>Your Name</strong>
+            <strong class="sidebar-text">Your Name</strong>
           </a>
           <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
             <li><a class="dropdown-item" href="#">New project...</a></li>
@@ -394,5 +406,6 @@
     </main>
     <script src="../js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
     <script src="../js/sidebars.js" class="astro-vvvwv3sm"></script>
+    <script src="../js/app.js"></script>
   </body>
 </html>
